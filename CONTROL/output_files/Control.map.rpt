@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Control
-Thu Nov 09 18:24:34 2023
+Fri Nov 10 16:23:06 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Nov 09 18:24:34 2023               ;
+; Analysis & Synthesis Status        ; Failed - Fri Nov 10 16:23:06 2023               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Control                                         ;
 ; Top-level Entity Name              ; Control                                         ;
@@ -157,20 +157,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 09 18:24:32 2023
+    Info: Processing started: Fri Nov 10 16:23:04 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Control -c Control
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
     Info (12022): Found design unit 1: Control-BEHAVIOR
     Info (12023): Found entity 1: Control
 Error (12049): Can't compile duplicate declarations of entity "Control" into library "work"
-    Error (12180): Instance could be entity "Control" in file Control.vhd compiled in library work File: C:/Users/fede_/OneDrive/Desktop/TYDD2/Proyecto_TYDD2/CONTROL/Control.vhd Line: 21
+    Error (12180): Instance could be entity "Control" in file Control.vhd compiled in library work File: C:/Users/Usuario/Desktop/TyDD 2/PROYECTO/Proyecto_TYDD2/Proyecto_TYDD2/CONTROL/Control.vhd Line: 21
     Error (12180): Instance could be entity "Control" in file Control.bdf compiled in library work
 Info (12021): Found 1 design units, including 1 entities, in source file control.bdf
 Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 4615 megabytes
-    Error: Processing ended: Thu Nov 09 18:24:35 2023
-    Error: Elapsed time: 00:00:03
+    Error: Peak virtual memory: 4612 megabytes
+    Error: Processing ended: Fri Nov 10 16:23:06 2023
+    Error: Elapsed time: 00:00:02
     Error: Total CPU time (on all processors): 00:00:02
 
 
