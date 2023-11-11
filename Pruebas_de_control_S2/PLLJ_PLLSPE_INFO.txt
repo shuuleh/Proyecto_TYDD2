@@ -1,0 +1,5 @@
+PLL_Name	altpll:altpll_component|RELOJ_altpll2:auto_generated|pll1
+PLLJITTER	50
+PLLSPEmax	84
+PLLSPEmin	-53
+
