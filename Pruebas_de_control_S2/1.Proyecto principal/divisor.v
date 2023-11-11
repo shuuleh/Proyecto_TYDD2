@@ -14,22 +14,31 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
-// CREATED		"Sat Nov 11 18:28:38 2023"
+// CREATED		"Sat Nov 11 20:54:16 2023"
 
-module divisorf16(
+module divisor(
 	A,
-	A16
+	A16,
+	A2,
+	A4,
+	A8
 );
 
 
 input wire	A;
 output reg	A16;
+output wire	A2;
+output wire	A4;
+output wire	A8;
 
 wire	SYNTHESIZED_WIRE_8;
 reg	JKFF_inst;
 reg	JKFF_inst2;
 reg	JKFF_inst3;
 
+assign	A2 = JKFF_inst;
+assign	A4 = JKFF_inst2;
+assign	A8 = JKFF_inst3;
 assign	SYNTHESIZED_WIRE_8 = 1;
 
 

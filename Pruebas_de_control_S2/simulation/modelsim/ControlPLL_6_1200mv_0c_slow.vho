@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "11/11/2023 18:37:12"
+-- DATE "11/11/2023 20:55:20"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -26,26 +26,36 @@
 -- This VHDL file should be used for ModelSim-Altera (VHDL) only
 -- 
 
+LIBRARY ALTERA;
 LIBRARY CYCLONEIVE;
 LIBRARY IEEE;
+USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE CYCLONEIVE.CYCLONEIVE_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY 	RELOJ IS
+ENTITY 	ControlPLL IS
     PORT (
-	inclk0 : IN std_logic;
-	c0 : OUT std_logic;
-	c1 : OUT std_logic
+	Rueda1 : OUT std_logic;
+	clk : IN std_logic;
+	RuedaD : OUT std_logic;
+	D11 : OUT std_logic;
+	D12 : OUT std_logic;
+	D21 : OUT std_logic;
+	D22 : OUT std_logic
 	);
-END RELOJ;
+END ControlPLL;
 
 -- Design Ports Information
--- c0	=>  Location: PIN_R4,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- c1	=>  Location: PIN_B16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- inclk0	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Rueda1	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RuedaD	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- D11	=>  Location: PIN_E11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- D12	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- D21	=>  Location: PIN_C8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- D22	=>  Location: PIN_E6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
-ARCHITECTURE structure OF RELOJ IS
+ARCHITECTURE structure OF ControlPLL IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -55,77 +65,137 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_inclk0 : std_logic;
-SIGNAL ww_c0 : std_logic;
-SIGNAL ww_c1 : std_logic;
-SIGNAL \altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inclk0~input_o\ : std_logic;
-SIGNAL \altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
-SIGNAL \altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
-SIGNAL \altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
-SIGNAL \altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL ww_Rueda1 : std_logic;
+SIGNAL ww_clk : std_logic;
+SIGNAL ww_RuedaD : std_logic;
+SIGNAL ww_D11 : std_logic;
+SIGNAL ww_D12 : std_logic;
+SIGNAL ww_D21 : std_logic;
+SIGNAL ww_D22 : std_logic;
+SIGNAL \inst|altpll_component|auto_generated|pll1_INCLK_bus\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \inst|altpll_component|auto_generated|pll1_CLK_bus\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \clk~input_o\ : std_logic;
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_fbout\ : std_logic;
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\ : std_logic;
+SIGNAL \inst5|JKFF_inst~0_combout\ : std_logic;
+SIGNAL \inst5|JKFF_inst~q\ : std_logic;
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\ : std_logic;
+SIGNAL \inst6|JKFF_inst~0_combout\ : std_logic;
+SIGNAL \inst6|JKFF_inst~q\ : std_logic;
+SIGNAL \inst|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
 
 BEGIN
 
-ww_inclk0 <= inclk0;
-c0 <= ww_c0;
-c1 <= ww_c1;
+Rueda1 <= ww_Rueda1;
+ww_clk <= clk;
+RuedaD <= ww_RuedaD;
+D11 <= ww_D11;
+D12 <= ww_D12;
+D21 <= ww_D21;
+D22 <= ww_D22;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
-\altpll_component|auto_generated|pll1_INCLK_bus\ <= (gnd & \inclk0~input_o\);
+\inst|altpll_component|auto_generated|pll1_INCLK_bus\ <= (gnd & \clk~input_o\);
 
-\altpll_component|auto_generated|wire_pll1_clk\(0) <= \altpll_component|auto_generated|pll1_CLK_bus\(0);
-\altpll_component|auto_generated|wire_pll1_clk\(1) <= \altpll_component|auto_generated|pll1_CLK_bus\(1);
-\altpll_component|auto_generated|wire_pll1_clk\(2) <= \altpll_component|auto_generated|pll1_CLK_bus\(2);
-\altpll_component|auto_generated|wire_pll1_clk\(3) <= \altpll_component|auto_generated|pll1_CLK_bus\(3);
-\altpll_component|auto_generated|wire_pll1_clk\(4) <= \altpll_component|auto_generated|pll1_CLK_bus\(4);
+\inst|altpll_component|auto_generated|wire_pll1_clk\(0) <= \inst|altpll_component|auto_generated|pll1_CLK_bus\(0);
+\inst|altpll_component|auto_generated|wire_pll1_clk\(1) <= \inst|altpll_component|auto_generated|pll1_CLK_bus\(1);
+\inst|altpll_component|auto_generated|wire_pll1_clk\(2) <= \inst|altpll_component|auto_generated|pll1_CLK_bus\(2);
+\inst|altpll_component|auto_generated|wire_pll1_clk\(3) <= \inst|altpll_component|auto_generated|pll1_CLK_bus\(3);
+\inst|altpll_component|auto_generated|wire_pll1_clk\(4) <= \inst|altpll_component|auto_generated|pll1_CLK_bus\(4);
 
-\altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \altpll_component|auto_generated|wire_pll1_clk\(0));
+\inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst|altpll_component|auto_generated|wire_pll1_clk\(0));
 
-\altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \altpll_component|auto_generated|wire_pll1_clk\(1));
+\inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \inst|altpll_component|auto_generated|wire_pll1_clk\(1));
 
--- Location: IOOBUF_X5_Y0_N23
-\c0~output\ : cycloneive_io_obuf
+-- Location: IOOBUF_X20_Y34_N23
+\Rueda1~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	i => \inst5|JKFF_inst~q\,
 	devoe => ww_devoe,
-	o => ww_c0);
+	o => ww_Rueda1);
 
--- Location: IOOBUF_X53_Y22_N2
-\c1~output\ : cycloneive_io_obuf
+-- Location: IOOBUF_X38_Y34_N2
+\RuedaD~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
+	i => \inst6|JKFF_inst~q\,
 	devoe => ww_devoe,
-	o => ww_c1);
+	o => ww_RuedaD);
 
--- Location: IOIBUF_X0_Y16_N8
-\inclk0~input\ : cycloneive_io_ibuf
+-- Location: IOOBUF_X45_Y34_N9
+\D11~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_D11);
+
+-- Location: IOOBUF_X45_Y34_N16
+\D12~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => ww_D12);
+
+-- Location: IOOBUF_X23_Y34_N16
+\D21~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => VCC,
+	devoe => ww_devoe,
+	o => ww_D21);
+
+-- Location: IOOBUF_X14_Y34_N16
+\D22~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => ww_D22);
+
+-- Location: IOIBUF_X27_Y0_N22
+\clk~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_inclk0,
-	o => \inclk0~input_o\);
+	i => ww_clk,
+	o => \clk~input_o\);
 
--- Location: PLL_1
-\altpll_component|auto_generated|pll1\ : cycloneive_pll
+-- Location: PLL_4
+\inst|altpll_component|auto_generated|pll1\ : cycloneive_pll
 -- pragma translate_off
 GENERIC MAP (
 	auto_settings => "false",
@@ -211,36 +281,92 @@ GENERIC MAP (
 	vco_post_scale => 2)
 -- pragma translate_on
 PORT MAP (
-	fbin => \altpll_component|auto_generated|wire_pll1_fbout\,
-	inclk => \altpll_component|auto_generated|pll1_INCLK_bus\,
-	fbout => \altpll_component|auto_generated|wire_pll1_fbout\,
-	clk => \altpll_component|auto_generated|pll1_CLK_bus\);
+	fbin => \inst|altpll_component|auto_generated|wire_pll1_fbout\,
+	inclk => \inst|altpll_component|auto_generated|pll1_INCLK_bus\,
+	fbout => \inst|altpll_component|auto_generated|wire_pll1_fbout\,
+	clk => \inst|altpll_component|auto_generated|pll1_CLK_bus\);
 
--- Location: CLKCTRL_G4
-\altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl\ : cycloneive_clkctrl
+-- Location: CLKCTRL_G19
+\inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
 	clock_type => "global clock",
 	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	inclk => \altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\,
+	inclk => \inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_INCLK_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
+	outclk => \inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\);
 
--- Location: CLKCTRL_G3
-\altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
+-- Location: LCCOMB_X20_Y33_N0
+\inst5|JKFF_inst~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \inst5|JKFF_inst~0_combout\ = !\inst5|JKFF_inst~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst5|JKFF_inst~q\,
+	combout => \inst5|JKFF_inst~0_combout\);
+
+-- Location: FF_X20_Y33_N1
+\inst5|JKFF_inst\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk\,
+	d => \inst5|JKFF_inst~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \inst5|JKFF_inst~q\);
+
+-- Location: CLKCTRL_G18
+\inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl\ : cycloneive_clkctrl
 -- pragma translate_off
 GENERIC MAP (
 	clock_type => "global clock",
 	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	inclk => \altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
+	inclk => \inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_INCLK_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
+	outclk => \inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\);
+
+-- Location: LCCOMB_X39_Y33_N0
+\inst6|JKFF_inst~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \inst6|JKFF_inst~0_combout\ = !\inst6|JKFF_inst~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst6|JKFF_inst~q\,
+	combout => \inst6|JKFF_inst~0_combout\);
+
+-- Location: FF_X39_Y33_N1
+\inst6|JKFF_inst\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \inst|altpll_component|auto_generated|wire_pll1_clk[1]~clkctrl_outclk\,
+	d => \inst6|JKFF_inst~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \inst6|JKFF_inst~q\);
 END structure;
 
 

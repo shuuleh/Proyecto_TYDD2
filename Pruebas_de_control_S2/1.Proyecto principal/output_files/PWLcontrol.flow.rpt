@@ -1,5 +1,5 @@
 Flow report for PWLcontrol
-Sat Nov 11 18:31:58 2023
+Sat Nov 11 20:57:02 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 11 18:31:58 2023           ;
+; Flow Status                        ; Successful - Sat Nov 11 20:57:02 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PWLcontrol                                      ;
 ; Top-level Entity Name              ; PWLcontrol                                      ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 18 / 22,320 ( < 1 % )                           ;
-;     Total combinational functions  ; 12 / 22,320 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 8 / 22,320 ( < 1 % )                            ;
-; Total registers                    ; 8                                               ;
+; Total logic elements               ; 8 / 22,320 ( < 1 % )                            ;
+;     Total combinational functions  ; 6 / 22,320 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 2 / 22,320 ( < 1 % )                            ;
+; Total registers                    ; 2                                               ;
 ; Total pins                         ; 7 / 154 ( 5 % )                                 ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2023 18:31:47 ;
+; Start date & time ; 11/11/2023 20:56:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PWLcontrol          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 237901789333285.169973830716896 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 237901789333285.169974700410988 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
 ; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --          ; --             ;
@@ -111,12 +111,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 4909 MB             ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4632 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:04     ; 1.0                     ; 4916 MB             ; 00:00:04                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4544 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4619 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4503 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:08                           ;
+; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

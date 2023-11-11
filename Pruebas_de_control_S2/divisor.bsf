@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 112 112)
-	(text "divisorf16" (rect 5 0 61 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 80 25 92)(font "Arial" ))
+	(rect 16 16 112 144)
+	(text "divisor" (rect 5 0 42 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -33,11 +33,32 @@ applicable agreement for further details.
 	(port
 		(pt 96 32)
 		(output)
-		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
-		(text "A16" (rect 52 27 75 41)(font "Arial" (font_size 8)))
+		(text "A2" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A2" (rect 59 27 75 41)(font "Arial" (font_size 8)))
 		(line (pt 96 32)(pt 80 32))
 	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "A4" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A4" (rect 59 43 75 57)(font "Arial" (font_size 8)))
+		(line (pt 96 48)(pt 80 48))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "A8" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A8" (rect 59 59 75 73)(font "Arial" (font_size 8)))
+		(line (pt 96 64)(pt 80 64))
+	)
+	(port
+		(pt 96 80)
+		(output)
+		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "A16" (rect 52 75 75 89)(font "Arial" (font_size 8)))
+		(line (pt 96 80)(pt 80 80))
+	)
 	(drawing
-		(rectangle (rect 16 16 80 80))
+		(rectangle (rect 16 16 80 112))
 	)
 )

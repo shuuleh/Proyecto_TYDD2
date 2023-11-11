@@ -28,8 +28,8 @@
 
 (DELAYFILE
   (SDFVERSION "2.1")
-  (DESIGN "RELOJ")
-  (DATE "11/11/2023 18:37:12")
+  (DESIGN "ControlPLL")
+  (DATE "11/11/2023 20:55:21")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -38,58 +38,104 @@
 
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\c0\~output\\)
+    (INSTANCE \\Rueda1\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (1314:1314:1314) (1324:1324:1324))
+        (PORT i (498:498:498) (522:522:522))
         (IOPATH i o (2593:2593:2593) (2562:2562:2562))
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\c1\~output\\)
+    (INSTANCE \\RuedaD\~output\\)
     (DELAY
       (ABSOLUTE
-        (PORT i (1275:1275:1275) (1298:1298:1298))
-        (IOPATH i o (2514:2514:2514) (2497:2497:2497))
+        (PORT i (486:486:486) (509:509:509))
+        (IOPATH i o (3880:3880:3880) (3931:3931:3931))
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE \\inclk0\~input\\)
+    (INSTANCE \\clk\~input\\)
     (DELAY
       (ABSOLUTE
-        (IOPATH i o (516:516:516) (681:681:681))
+        (IOPATH i o (514:514:514) (679:679:679))
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_pll")
-    (INSTANCE \\altpll_component\|auto_generated\|pll1\\)
+    (INSTANCE \\inst\|altpll_component\|auto_generated\|pll1\\)
     (DELAY
       (ABSOLUTE
-        (PORT inclk[0] (1875:1875:1875) (1875:1875:1875))
+        (PORT inclk[0] (1878:1878:1878) (1878:1878:1878))
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneive_clkctrl")
-    (INSTANCE \\altpll_component\|auto_generated\|wire_pll1_clk\[0\]\~clkctrl\\)
+    (INSTANCE \\inst\|altpll_component\|auto_generated\|wire_pll1_clk\[0\]\~clkctrl\\)
     (DELAY
       (ABSOLUTE
-        (PORT inclk[0] (1890:1890:1890) (1874:1874:1874))
+        (PORT inclk[0] (1896:1896:1896) (1878:1878:1878))
       )
     )
   )
   (CELL
-    (CELLTYPE "cycloneive_clkctrl")
-    (INSTANCE \\altpll_component\|auto_generated\|wire_pll1_clk\[1\]\~clkctrl\\)
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\inst5\|JKFF_inst\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT inclk[0] (1890:1890:1890) (1874:1874:1874))
+        (IOPATH datac combout (353:353:353) (369:369:369))
       )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE \\inst5\|JKFF_inst\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1530:1530:1530) (1543:1543:1543))
+        (PORT d (74:74:74) (91:91:91))
+        (IOPATH (posedge clk) q (199:199:199) (199:199:199))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (157:157:157))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE \\inst\|altpll_component\|auto_generated\|wire_pll1_clk\[1\]\~clkctrl\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (1896:1896:1896) (1878:1878:1878))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE \\inst6\|JKFF_inst\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datac combout (353:353:353) (369:369:369))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE \\inst6\|JKFF_inst\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1533:1533:1533) (1545:1545:1545))
+        (PORT d (74:74:74) (91:91:91))
+        (IOPATH (posedge clk) q (199:199:199) (199:199:199))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (157:157:157))
     )
   )
 )

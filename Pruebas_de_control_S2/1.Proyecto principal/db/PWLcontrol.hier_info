@@ -1,5 +1,5 @@
 |PWLcontrol
-enable_isq <= divisorf16:inst11.A16
+enable_isq <= divisor:inst2.A2
 clk => PLL1:inst1.inclk0
 clk => PLL2:inst.inclk0
 clk => PLL3:inst4.inclk0
@@ -7,12 +7,15 @@ rueda11 => deco:inst9.A1
 rueda12 => deco:inst9.B1
 rueda21 => deco:inst9.A2
 rueda22 => deco:inst9.B2
-enable_der <= divisorf16:inst13.A16
+enable_der <= divisor:inst3.A2
 
 
-|PWLcontrol|divisorf16:inst11
+|PWLcontrol|divisor:inst2
 A => JKFF_inst.CLK
 A16 <= A16~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= JKFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+A4 <= JKFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+A8 <= JKFF_inst3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PWLcontrol|deco:inst9
@@ -272,8 +275,11 @@ inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
 
 
-|PWLcontrol|divisorf16:inst13
+|PWLcontrol|divisor:inst3
 A => JKFF_inst.CLK
 A16 <= A16~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= JKFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+A4 <= JKFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+A8 <= JKFF_inst3.DB_MAX_OUTPUT_PORT_TYPE
 
 

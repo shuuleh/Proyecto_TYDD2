@@ -1,12 +1,30 @@
-|RELOJ
+|ControlPLL
+Rueda1 <= divisor:inst5.A2
+clk => RELOJ:inst.inclk0
+RuedaD <= divisor:inst6.A2
+D11 <= <GND>
+D12 <= <VCC>
+D21 <= <VCC>
+D22 <= <GND>
+
+
+|ControlPLL|divisor:inst5
+A => JKFF_inst.CLK
+A16 <= A16~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= JKFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+A4 <= JKFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+A8 <= JKFF_inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControlPLL|RELOJ:inst
 inclk0 => sub_wire4[0].IN1
 c0 <= altpll:altpll_component.clk
 c1 <= altpll:altpll_component.clk
 
 
-|RELOJ|altpll:altpll_component
-inclk[0] => RELOJ_altpll2:auto_generated.inclk[0]
-inclk[1] => RELOJ_altpll2:auto_generated.inclk[1]
+|ControlPLL|RELOJ:inst|altpll:altpll_component
+inclk[0] => RELOJ_altpll:auto_generated.inclk[0]
+inclk[1] => RELOJ_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
 pllena => ~NO_FANOUT~
 clkswitch => ~NO_FANOUT~
@@ -64,7 +82,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|RELOJ|altpll:altpll_component|RELOJ_altpll2:auto_generated
+|ControlPLL|RELOJ:inst|altpll:altpll_component|RELOJ_altpll:auto_generated
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
@@ -72,5 +90,13 @@ clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
+
+
+|ControlPLL|divisor:inst6
+A => JKFF_inst.CLK
+A16 <= A16~reg0.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= JKFF_inst.DB_MAX_OUTPUT_PORT_TYPE
+A4 <= JKFF_inst2.DB_MAX_OUTPUT_PORT_TYPE
+A8 <= JKFF_inst3.DB_MAX_OUTPUT_PORT_TYPE
 
 

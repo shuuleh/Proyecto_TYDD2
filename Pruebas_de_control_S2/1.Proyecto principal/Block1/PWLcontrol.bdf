@@ -119,6 +119,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1448 120 1504 136))
 )
 (pin
 	(output)
@@ -135,6 +136,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1464 376 1520 392))
 )
 (symbol
 	(rect 232 256 472 424)
@@ -438,9 +440,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1112 80 1208 176)
-	(text "divisorf16" (rect 5 0 61 14)(font "Arial" (font_size 8)))
-	(text "inst11" (rect 8 80 37 92)(font "Arial" ))
+	(rect 1112 80 1208 208)
+	(text "divisor" (rect 5 0 42 14)(font "Arial" (font_size 8)))
+	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -451,18 +453,39 @@ applicable agreement for further details.
 	(port
 		(pt 96 32)
 		(output)
-		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
-		(text "A16" (rect 52 27 75 41)(font "Arial" (font_size 8)))
+		(text "A2" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A2" (rect 59 27 75 41)(font "Arial" (font_size 8)))
 		(line (pt 96 32)(pt 80 32))
 	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "A4" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A4" (rect 59 43 75 57)(font "Arial" (font_size 8)))
+		(line (pt 96 48)(pt 80 48))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "A8" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A8" (rect 59 59 75 73)(font "Arial" (font_size 8)))
+		(line (pt 96 64)(pt 80 64))
+	)
+	(port
+		(pt 96 80)
+		(output)
+		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "A16" (rect 52 75 75 89)(font "Arial" (font_size 8)))
+		(line (pt 96 80)(pt 80 80))
+	)
 	(drawing
-		(rectangle (rect 16 16 80 80))
+		(rectangle (rect 16 16 80 112))
 	)
 )
 (symbol
-	(rect 1104 336 1200 432)
-	(text "divisorf16" (rect 5 0 61 14)(font "Arial" (font_size 8)))
-	(text "inst13" (rect 8 80 37 92)(font "Arial" ))
+	(rect 1104 336 1200 464)
+	(text "divisor" (rect 5 0 42 14)(font "Arial" (font_size 8)))
+	(text "inst3" (rect 8 112 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -473,12 +496,33 @@ applicable agreement for further details.
 	(port
 		(pt 96 32)
 		(output)
-		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
-		(text "A16" (rect 52 27 75 41)(font "Arial" (font_size 8)))
+		(text "A2" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A2" (rect 59 27 75 41)(font "Arial" (font_size 8)))
 		(line (pt 96 32)(pt 80 32))
 	)
+	(port
+		(pt 96 48)
+		(output)
+		(text "A4" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A4" (rect 59 43 75 57)(font "Arial" (font_size 8)))
+		(line (pt 96 48)(pt 80 48))
+	)
+	(port
+		(pt 96 64)
+		(output)
+		(text "A8" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "A8" (rect 59 59 75 73)(font "Arial" (font_size 8)))
+		(line (pt 96 64)(pt 80 64))
+	)
+	(port
+		(pt 96 80)
+		(output)
+		(text "A16" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "A16" (rect 52 75 75 89)(font "Arial" (font_size 8)))
+		(line (pt 96 80)(pt 80 80))
+	)
 	(drawing
-		(rectangle (rect 16 16 80 80))
+		(rectangle (rect 16 16 80 112))
 	)
 )
 (connector

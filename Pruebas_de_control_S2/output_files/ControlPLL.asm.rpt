@@ -1,5 +1,5 @@
 Assembler report for ControlPLL
-Sat Nov 11 18:37:09 2023
+Sat Nov 11 20:55:17 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Leo/Desktop/proyecto/TyDD2/Pruebas_de_control/output_files/ControlPLL.sof
+  5. Assembler Device Options: C:/Users/Leo/Desktop/Proyecto-git/Pruebas_de_control_S2/output_files/ControlPLL.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Nov 11 18:37:09 2023 ;
+; Assembler Status      ; Successful - Sat Nov 11 20:55:17 2023 ;
 ; Revision Name         ; ControlPLL                            ;
-; Top-level Entity Name ; RELOJ                                 ;
+; Top-level Entity Name ; ControlPLL                            ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                          ;
-+------------------------------------------------------------------------------------+
-; File Name                                                                          ;
-+------------------------------------------------------------------------------------+
-; C:/Users/Leo/Desktop/proyecto/TyDD2/Pruebas_de_control/output_files/ControlPLL.sof ;
-+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                           ;
++-------------------------------------------------------------------------------------+
+; File Name                                                                           ;
++-------------------------------------------------------------------------------------+
+; C:/Users/Leo/Desktop/Proyecto-git/Pruebas_de_control_S2/output_files/ControlPLL.sof ;
++-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Leo/Desktop/proyecto/TyDD2/Pruebas_de_control/output_files/ControlPLL.sof ;
-+----------------+---------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                     ;
-+----------------+---------------------------------------------------------------------------------------------+
-; Device         ; EP4CE22F17C6                                                                                ;
-; JTAG usercode  ; 0x001352DE                                                                                  ;
-; Checksum       ; 0x001352DE                                                                                  ;
-+----------------+---------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Leo/Desktop/Proyecto-git/Pruebas_de_control_S2/output_files/ControlPLL.sof ;
++----------------+----------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                      ;
++----------------+----------------------------------------------------------------------------------------------+
+; Device         ; EP4CE22F17C6                                                                                 ;
+; JTAG usercode  ; 0x00135BC6                                                                                   ;
+; Checksum       ; 0x00135BC6                                                                                   ;
++----------------+----------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 11 18:37:08 2023
+    Info: Processing started: Sat Nov 11 20:55:16 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ControlPLL -c ControlPLL
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4536 megabytes
-    Info: Processing ended: Sat Nov 11 18:37:09 2023
+    Info: Peak virtual memory: 4540 megabytes
+    Info: Processing ended: Sat Nov 11 20:55:17 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

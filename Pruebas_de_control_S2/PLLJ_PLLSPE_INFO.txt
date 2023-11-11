@@ -1,4 +1,4 @@
-PLL_Name	altpll:altpll_component|RELOJ_altpll2:auto_generated|pll1
+PLL_Name	RELOJ:inst|altpll:altpll_component|RELOJ_altpll:auto_generated|pll1
 PLLJITTER	50
 PLLSPEmax	84
 PLLSPEmin	-53
