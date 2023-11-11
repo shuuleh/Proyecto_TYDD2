@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ControlPLL">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RELOJ|altpll:altpll_component" CBX_FILE_NAME="RELOJ_altpll2.v"/>
+	</PROJECT>
+</LOG_ROOT>
