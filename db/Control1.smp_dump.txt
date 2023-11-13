@@ -1,0 +1,7 @@
+
+State Machine - |Control1|fstate
+Name fstate.A fstate.I fstate.D fstate.R 
+fstate.R 0 0 0 0 
+fstate.D 0 0 1 1 
+fstate.I 0 1 0 1 
+fstate.A 1 0 0 1 
