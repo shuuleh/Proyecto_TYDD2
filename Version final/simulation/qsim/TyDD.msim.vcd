@@ -1,0 +1,648 @@
+$comment
+	File created using the following command:
+		vcd file TyDD.msim.vcd -direction
+$end
+$date
+	Tue Nov 14 13:28:33 2023
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module TyDD_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 1 " pin_name2 $end
+$var reg 1 # pin_name3 $end
+$var reg 1 $ pin_name4 $end
+$var reg 1 % pin_name5 $end
+$var wire 1 & D11 $end
+$var wire 1 ' D12 $end
+$var wire 1 ( D21 $end
+$var wire 1 ) D22 $end
+$var wire 1 * locked $end
+$var wire 1 + Rueda1 $end
+$var wire 1 , RuedaD $end
+$var wire 1 - sampler $end
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 inst5|inst3~q $end
+$var wire 1 5 inst6|inst3~q $end
+$var wire 1 6 inst5|inst3~0_combout $end
+$var wire 1 7 inst6|inst3~0_combout $end
+$var wire 1 8 inst|altpll_component|auto_generated|wire_pll1_clk[0]~clkctrl_outclk $end
+$var wire 1 9 inst5|inst~0_combout $end
+$var wire 1 : inst5|inst~q $end
+$var wire 1 ; pin_name2~input_o $end
+$var wire 1 < inst5|inst2~0_combout $end
+$var wire 1 = inst5|inst2~feeder_combout $end
+$var wire 1 > inst5|inst2~q $end
+$var wire 1 ? pin_name3~input_o $end
+$var wire 1 @ inst4|Amayor~0_combout $end
+$var wire 1 A inst4|Amayor~combout $end
+$var wire 1 B inst6|inst~0_combout $end
+$var wire 1 C inst6|inst~q $end
+$var wire 1 D pin_name4~input_o $end
+$var wire 1 E inst6|inst2~0_combout $end
+$var wire 1 F inst6|inst2~feeder_combout $end
+$var wire 1 G inst6|inst2~q $end
+$var wire 1 H pin_name5~input_o $end
+$var wire 1 I inst7|Amayor~0_combout $end
+$var wire 1 J inst7|Amayor~combout $end
+$var wire 1 K clk~input_o $end
+$var wire 1 L inst|altpll_component|auto_generated|wire_pll1_fbout $end
+$var wire 1 M inst|altpll_component|auto_generated|wire_pll1_locked $end
+$var wire 1 N inst|altpll_component|auto_generated|wire_pll1_clk [4] $end
+$var wire 1 O inst|altpll_component|auto_generated|wire_pll1_clk [3] $end
+$var wire 1 P inst|altpll_component|auto_generated|wire_pll1_clk [2] $end
+$var wire 1 Q inst|altpll_component|auto_generated|wire_pll1_clk [1] $end
+$var wire 1 R inst|altpll_component|auto_generated|wire_pll1_clk [0] $end
+$var wire 1 S inst|altpll_component|auto_generated|pll1_CLK_bus [4] $end
+$var wire 1 T inst|altpll_component|auto_generated|pll1_CLK_bus [3] $end
+$var wire 1 U inst|altpll_component|auto_generated|pll1_CLK_bus [2] $end
+$var wire 1 V inst|altpll_component|auto_generated|pll1_CLK_bus [1] $end
+$var wire 1 W inst|altpll_component|auto_generated|pll1_CLK_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+1$
+1%
+0&
+1'
+1(
+0)
+0*
+0+
+0,
+x-
+0.
+1/
+x0
+11
+12
+13
+04
+05
+16
+17
+x8
+19
+0:
+1;
+1<
+1=
+0>
+1?
+0@
+0A
+1B
+0C
+1D
+1E
+1F
+0G
+1H
+0I
+0J
+0K
+xL
+0M
+xR
+xQ
+xP
+xO
+xN
+xW
+xV
+xU
+xT
+xS
+$end
+#833
+1L
+#10000
+1!
+0-
+1K
+#10833
+0L
+#20000
+0!
+1-
+0K
+#20833
+1L
+#30000
+1!
+0-
+1K
+#30833
+0L
+#40000
+0!
+1-
+0K
+#40833
+1L
+#50000
+1!
+0-
+1K
+#50833
+0L
+#60000
+0!
+1-
+0K
+#60833
+1L
+#70000
+1!
+0-
+1K
+#75416
+0L
+#80000
+0!
+1-
+0K
+#90000
+1!
+0-
+1K
+1L
+1M
+0S
+0T
+0U
+0V
+1W
+0N
+0O
+0P
+0Q
+1R
+18
+1*
+#100000
+0!
+1-
+0K
+0L
+#110000
+1!
+0-
+1K
+1L
+#120000
+0!
+1-
+0K
+0L
+#130000
+1!
+0-
+1K
+1L
+#140000
+0!
+1-
+0K
+0L
+#150000
+1!
+0-
+1K
+1L
+#160000
+0!
+1-
+0K
+0L
+#170000
+1!
+0-
+1K
+1L
+#180000
+0!
+1-
+0K
+0L
+#190000
+1!
+0-
+1K
+1L
+#200000
+0!
+1-
+0K
+0L
+#210000
+1!
+0-
+1K
+1L
+#220000
+0!
+1-
+0K
+0L
+#230000
+1!
+0-
+1K
+1L
+#240000
+0!
+1-
+0K
+0L
+#250000
+1!
+0-
+1K
+1L
+#260000
+0!
+1-
+0K
+0L
+#270000
+1!
+0-
+1K
+1L
+#280000
+0!
+1-
+0K
+0L
+#290000
+1!
+0-
+1K
+1L
+#300000
+0!
+1-
+0K
+0L
+#310000
+1!
+0-
+1K
+1L
+#320000
+0!
+1-
+0K
+0L
+#330000
+1!
+0-
+1K
+1L
+#340000
+0!
+1-
+0K
+0L
+#350000
+1!
+0-
+1K
+1L
+#360000
+0!
+1-
+0K
+0L
+#370000
+1!
+0-
+1K
+1L
+#380000
+0!
+1-
+0K
+0L
+#390000
+1!
+0-
+1K
+1L
+#400000
+0!
+1-
+0K
+0L
+#410000
+1!
+0-
+1K
+1L
+#420000
+0!
+1-
+0K
+0L
+#430000
+1!
+0-
+1K
+1L
+#440000
+0!
+1-
+0K
+0L
+#450000
+1!
+0-
+1K
+1L
+#460000
+0!
+1-
+0K
+0L
+#470000
+1!
+0-
+1K
+1L
+#480000
+0!
+1-
+0K
+0L
+#490000
+1!
+0-
+1K
+1L
+#500000
+0!
+1-
+0K
+0L
+#510000
+1!
+0-
+1K
+1L
+#520000
+0!
+1-
+0K
+0L
+#530000
+1!
+0-
+1K
+1L
+#540000
+0!
+1-
+0K
+0L
+#550000
+1!
+0-
+1K
+1L
+#560000
+0!
+1-
+0K
+0L
+#570000
+1!
+0-
+1K
+1L
+#580000
+0!
+1-
+0K
+0L
+#590000
+1!
+0-
+1K
+1L
+#600000
+0!
+1-
+0K
+0L
+#610000
+1!
+0-
+1K
+1L
+#620000
+0!
+1-
+0K
+0L
+#630000
+1!
+0-
+1K
+1L
+#640000
+0!
+1-
+0K
+0L
+#650000
+1!
+0-
+1K
+1L
+#660000
+0!
+1-
+0K
+0L
+#670000
+1!
+0-
+1K
+1L
+#680000
+0!
+1-
+0K
+0L
+#690000
+1!
+0-
+1K
+1L
+#700000
+0!
+1-
+0K
+0L
+#710000
+1!
+0-
+1K
+1L
+#720000
+0!
+1-
+0K
+0L
+#730000
+1!
+0-
+1K
+1L
+#740000
+0!
+1-
+0K
+0L
+#750000
+1!
+0-
+1K
+1L
+#760000
+0!
+1-
+0K
+0L
+#770000
+1!
+0-
+1K
+1L
+#780000
+0!
+1-
+0K
+0L
+#790000
+1!
+0-
+1K
+1L
+#800000
+0!
+1-
+0K
+0L
+#810000
+1!
+0-
+1K
+1L
+#820000
+0!
+1-
+0K
+0L
+#830000
+1!
+0-
+1K
+1L
+#840000
+0!
+1-
+0K
+0L
+#850000
+1!
+0-
+1K
+1L
+#860000
+0!
+1-
+0K
+0L
+#870000
+1!
+0-
+1K
+1L
+#880000
+0!
+1-
+0K
+0L
+#890000
+1!
+0-
+1K
+1L
+#900000
+0!
+1-
+0K
+0L
+#910000
+1!
+0-
+1K
+1L
+#920000
+0!
+1-
+0K
+0L
+#930000
+1!
+0-
+1K
+1L
+#940000
+0!
+1-
+0K
+0L
+#950000
+1!
+0-
+1K
+1L
+#960000
+0!
+1-
+0K
+0L
+#970000
+1!
+0-
+1K
+1L
+#980000
+0!
+1-
+0K
+0L
+#990000
+1!
+0-
+1K
+1L
+#1000000
